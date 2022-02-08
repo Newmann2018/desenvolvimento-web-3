@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>cadastro de pets</title>
+    <link rel="stylesheet" th:href="@{/css/root.css}" />
+    <link rel="stylesheet" th:href="@{/css/menu.css}" />
+    <link rel="stylesheet" th:href="@{/css/table.css}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cadastro de pets/forminsert">Cadastrar novo pets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="box">
+      <table>
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">nome</th>
+          <th scope="col">email</th>
+          <th scope="col">usuario</th>
+          <th scope="col">senha</th>
+          <th scope="col">telefone</th>
+          <th scope="col">cidade</th>
+          <th scope="col">estado</th>
+          <th scope="col">sexo</th>
+        </thead>
+        <tbody>
+          <tr th:each="book : ${cadastro de pets}">
+            <td th:text="${cadastro de pets.id}"></td>
+            <td th:text="${cadastro de pets.nome}"></td>
+            <td th:text="${cadastro de pets.emal}"></td>
+            <td th:text="${cadastro de pets.usuario}"></td>
+            <td th:text="${cadastro de pets.senha}"></td>
+            <td th:text="${cadastro de pets.telefone}"></td>
+            <td th:text="${cadastro de pets.cidade}"></td>
+            <td th:text="${cadastro de pets.estado}"></td>
+            <td th:text="${cadastro de pets.sexo}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

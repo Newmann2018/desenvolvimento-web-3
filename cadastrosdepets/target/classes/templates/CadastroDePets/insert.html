@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>cadastro de pets</title>
+    <link rel="stylesheet" th:href="@{/css/root.css}" />
+    <link rel="stylesheet" th:href="@{/css/menu.css}" />
+    <link rel="stylesheet" th:href="@{/css/form.css}" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cadastro de pets/list">Listar pets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form
+        action="#"
+        th:action="@{/cadastrodepets/insert}"
+        method="post"
+        th:object="${cadastrodepets}"
+      >
+	 <div id="title">
+	 	<h1 id="title-form">Cadastro de novo pets</h1>
+	 	<a class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+	 </div>
+	 <div class="container-form">
+	 	<div class="input_div">
+	 	<input class="input_form" type="text" name="name" placeholder="Digite seu Nome" value="" required>
+	 </div>
+	 <div class="input_div">
+	 	<input class="input_form" type="text" name="email" placeholder="Digite seu Email" value="" required>
+	 </div>
+	 <div class="input_div">
+	 	<input class="input_form" type="text" name="login" placeholder="Digite seu Login" value="" required>
+	 </div>
+	 <div class="input_div">
+	 	<input class="input_form" type="password" name="password" placeholder="Digite sua Senha" required>
+	 </div>
+	 <div class="input_div">
+	 	<input class="input_form" type="text" name="telefone" placeholder="Digite seu Telefone" value="" required>
+     </div>
+     <div class="input_div">
+     	<input class="input_form" type="text" name="city" placeholder="Digite sua Cidade" value="" required>
+     </div>
+     <div class="input_div">
+     	<input class="input_form" type="text" name="state" placeholder="Digite seu Estado" value="" required>
+     </div>
+     <div class="input_div">
+     Sexo:
+     	<input type="radio" name="masc" value="Masculino" required> Masculino
+     	<input type="radio" name="fem" value="Feminino" required> Feminino
+     </div>
+     </div>
+     		<button class="send-buttons" name="action" value="create"> enviar </button>
+     		<button class="send-buttons" name="action" value="reset"> apagar </button>
+     </form>
+    </main>
+  </body>
+</html>
